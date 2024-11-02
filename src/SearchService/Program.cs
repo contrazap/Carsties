@@ -27,7 +27,7 @@ builder.Services.AddMassTransit(x =>
         cfg.ReceiveEndpoint("search-auction-created", e =>
         {
             e.UseMessageRetry(r => r.Interval(5, 5));
-            e.Consumer<AuctionCreatedConsumer>(context);
+            e.ConfigureConsumer<AuctionCreatedConsumer>(context);
         });
 
         cfg.ConfigureEndpoints(context);
