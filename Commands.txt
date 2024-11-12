@@ -24,3 +24,4 @@ docker compose build auction-svc
 docker compose build search-svc
 docker compose build identity-svc
 docker compose build gateway-svc
+npx create-next-app@latest
