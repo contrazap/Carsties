@@ -14,7 +14,7 @@ export default function CarImage({ imageUrl, make, model, color }: Props) {
   const [isLoading, setLoading] = useState(true);
 
   return (
-    <div>
+    <div className="relative w-full h-[100%]">
       <Image
         src={imageUrl}
         alt={`Image of ${make} ${model} in ${color}`}
