@@ -25,3 +25,9 @@ docker compose build search-svc
 docker compose build identity-svc
 docker compose build gateway-svc
 npx create-next-app@latest
+dotnet new xunit -o tests\AuctionService.UnitTests
+dotnet sln add tests\AuctionService.UnitTests
+dotnet add reference ..\..\src\AuctionService
+dotnet new xunit -o tests/AuctionService.IntegrationTests
+dotnet sln add tests\AuctionService.IntegrationTests
+dotnet add reference ..\..\src\AuctionService
